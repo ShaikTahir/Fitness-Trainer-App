@@ -1,0 +1,7 @@
+<h2>Add Appointment</h2>
+<mat-form-field appearance="fill">
+  <input matInput [matDatepicker]="picker" placeholder="Select appointment date" [(ngModel)]="selectedDate">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="addAppointment()">Add Appointment</button>

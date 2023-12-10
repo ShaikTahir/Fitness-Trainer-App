@@ -1,0 +1,49 @@
+.client-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .client-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .client-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .appointments {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .appointment {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+  }
+  
+
+  .client-list-card {
+    max-height: 400px; /* Set a maximum height for the card */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+  }
+  
+  .client-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Rest of your styles for client-row, client-info, and appointments sections remain unchanged */
+  

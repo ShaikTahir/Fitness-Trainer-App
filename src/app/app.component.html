@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="header">
+  <span class="app-title">My Fitness Trainer App</span>
+</mat-toolbar>
+
+<div class="app-body">
+  <mat-grid-list cols="2" rowHeight="100%">
+    <mat-grid-tile>
+      <mat-card class="client-list-card">
+        <mat-card-header>
+          <mat-card-title>Client List</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <app-client-list></app-client-list>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="calendar-card">
+        <mat-card-header>
+          <mat-card-title>Calendar View</mat-card-title>
+          <div style="padding-left: 30px;">
+            <!-- Your existing code for client list -->
+            <button mat-raised-button color="primary" (click)="openCalendar()">{{show ? 'hide' : 'show'}} Calendar</button>
+          </div>
+          
+        </mat-card-header>
+        <mat-card-content *ngIf="show">
+          <app-calendar-view></app-calendar-view>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<mat-toolbar color="primary" class="footer">
+  <span class="footer-text">Footer Content</span>
+</mat-toolbar>

@@ -1,0 +1,35 @@
+
+    <div class="client-grid" style="height: 500px;overflow: auto;">
+        <div *ngFor="let client of clients" class="client-row">
+          <div class="client-info">
+            <mat-form-field appearance="fill">
+              <input matInput placeholder="First Name" [(ngModel)]="client.firstName" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <input matInput placeholder="Last Name" [(ngModel)]="client.lastName" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <input matInput placeholder="Location" [(ngModel)]="client.location" />
+            </mat-form-field>
+          </div>
+          <div class="appointments">
+            <h4>Appointments</h4>
+            <div *ngFor="let appointment of client.appointments; let i = index" class="appointment">
+              <mat-form-field appearance="fill">
+                <input matInput type="datetime-local" placeholder="Appointment Date" [(ngModel)]="appointment.date" />
+              </mat-form-field>
+              <button mat-icon-button color="primary" aria-label="Edit Appointment" (click)="editAppointment(client.clientId, appointment.id)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" aria-label="Delete Appointment" (click)="deleteAppointment(client.clientId,  appointment.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+            <button mat-raised-button color="primary" (click)="addAppointment(client.clientId)">
+              Add Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+  
+  

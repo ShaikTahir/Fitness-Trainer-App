@@ -1,0 +1,9 @@
+.calendar-container {
+    height: 500px;
+    width: auto; /* Set the desired height */
+    overflow: auto;
+    background-color: #f7f7f7; /* Set a background color */
+    border-radius: 8px; /* Adjust border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for a subtle effect */
+  }
+  
